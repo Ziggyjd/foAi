@@ -10,7 +10,6 @@ Run:   python app.py    then open http://127.0.0.1:5000
 
 Author: (assignment build)
 """
-
 import sqlite3
 import os
 from datetime import datetime, date, timedelta
@@ -621,6 +620,5 @@ def statement(bid):
 if __name__ == "__main__":
     init_db()
     seed_db()
-    port = int(os.environ.get("PORT", 5000))
-    print(f"SafeKeep running →  http://0.0.0.0:{port}")
-    app.run(host="0.0.0.0", port=port, debug=False)
+    print("SafeKeep running →  http://127.0.0.1:5000")
+    app.run(debug=True, port=5000)
